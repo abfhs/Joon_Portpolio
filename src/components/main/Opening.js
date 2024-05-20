@@ -3,20 +3,24 @@ import '../../styles/Opening.css';
 
 const Opening = () => {
   const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
   const [step, setStep] = useState(0);
-  const message = "안녕하세요. 프론트엔드 개발자 강준영입니다.";
-  let index = 0;
+  const message = "안녕안녕안녕안녕안녕안녕";
 
   useEffect(() => {
     const interval = setInterval(() => {
       setText((prev) => prev + message[index]);
-      index++;
-      if (index === message.length) {
-        clearInterval(interval);
-      }
+      setIndex((prevIndex) => {
+        var newIndex = prevIndex + 1;
+        console.log(newIndex ," "+ message.length)
+        if (newIndex === message.length-1) {
+          clearInterval(interval);
+        }
+        return newIndex;
+      });
     }, 100);
     return () => clearInterval(interval);
-  }, []);
+  }, [index, message]);
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
