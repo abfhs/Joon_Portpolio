@@ -1,11 +1,11 @@
 import '@picocss/pico';
 import React, { useState } from 'react';
-import '../../styles/App.css'; // CSS 파일 임포트
+import '../../styles/Scraping.css'; // CSS 파일 임포트
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PdfViewer from '../../components/scraping/PdfViewers.js';
 import { sendPostRequest, sendPostRequest1, sendPostRequest2, sendPostRequest3 } from '../scraping/script/request.js';
 import { useAnimatedRemoval } from '../scraping/script/useAnimatedRemoval.js';
-import SelectionBox from '../scraping/components/SelectionBox';
+import SelectionBox from '../scraping/SelectionBox.js';
 
 function BuildingScraping() {
 
@@ -141,9 +141,6 @@ function BuildingScraping() {
           </section>
         </main>
       </div>
-      <footer className="container">
-        <small><a href="#">개인정보처리방침</a> • <a href="#">이용약관</a></small>
-      </footer>
     </div>
   );
 }

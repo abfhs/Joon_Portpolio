@@ -1,0 +1,129 @@
+.background-image {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.7); /* 0.7의 투명도로 배경을 흐리게 설정 */
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.search-container,
+.addr-container,
+.dong-container,
+.ho-container {
+transition: transform 1.1s ease-out, opacity 1.1s ease-out;
+display: flex;
+justify-content: center;
+opacity: 1;
+}
+
+.hide-search,
+.hide-addr,
+.hide-dong,
+.hide-ho {
+transform: translateX(-100%);
+opacity: 0;
+visibility: hidden;
+transition: visibility 0s 1.1s, transform 1.1s ease-out, opacity 1.1s ease-out;
+}
+
+/* Flex container for search input and button */
+.search-form {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px; /* Add space between input and button */
+}
+
+.search-form input[type="text"] {
+flex: 1; /* Allow input to grow and fill available space */
+}
+
+.search-form button {
+flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+footer.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Footer의 배경을 반투명하게 설정 */
+  color: white; /* Footer 텍스트 색상 설정 */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .overlay {
+      padding: 20px;
+  }
+
+  .search-container,
+  .addr-container,
+  .dong-container,
+  .ho-container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .search-form {
+      flex-direction: column;
+      gap: 5px; /* Add space between input and button */
+  }
+
+  .search-form input[type="text"] {
+      width: 100%;
+  }
+
+  .search-form button {
+      width: 100%;
+  }
+
+  hgroup h2, hgroup h3 {
+      text-align: center;
+  }
+}
+
+/* PC Styles */
+@media (min-width: 769px) {
+  .overlay {
+      padding: 30px;
+  }
+
+  .search-container,
+  .addr-container,
+  .dong-container,
+  .ho-container {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .search-form {
+      flex-direction: row;
+      gap: 10px; /* Add space between input and button */
+  }
+
+  .search-form input[type="text"] {
+      width: auto;
+  }
+
+  .search-form button {
+      width: auto;
+  }
+
+  hgroup h2, hgroup h3 {
+      text-align: left;
+  }
+}
