@@ -1,5 +1,5 @@
 import '@picocss/pico';
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BuildingScraping from './components/scraping/BuildingScraping';
 import Opening from './components/main/Opening';
