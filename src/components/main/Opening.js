@@ -9,9 +9,15 @@ function Opening() {
     <div className="app">
       <Header />
       <div className="content">
-        <Profile />
-        <Experience />
+        <div className="profile-container">
+          <Profile />
+        </div>
+        <div className="intro">
+          <h2>About Me</h2>
+          <p>Short self-introduction goes here.</p>
+        </div>
       </div>
+      <Experience />
     </div>
   );
 }

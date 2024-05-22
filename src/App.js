@@ -7,8 +7,8 @@ import Opening from './components/main/Opening';
 function App() {
   return (
     <div>
-      <Opening/>
-      {/* <BuildingScraping/> */}
+      {/* <Opening/> */}
+      <BuildingScraping/>
     </div>
   );
 }

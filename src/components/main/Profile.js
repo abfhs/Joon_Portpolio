@@ -3,10 +3,10 @@ import React from 'react';
 const Profile = () => {
   return (
     <div className="profile">
-      <img src="profile.jpg" alt="Profile" className="profile-pic" />
+      <img src="/profile_fake.png" alt="Profile" className="profile-pic" />
       <div className="profile-info">
         <h2>000</h2>
-        <p>안녕하세요! 개발자 강준영입니다.</p>
+        <p>ㅎㅇ ㅇㅇㅇㅇㅇㅇㅇㅇ.</p>
         <div className="profile-details">
           <div className="profile-item">
             <strong>나이:</strong> 30

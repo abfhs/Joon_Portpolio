@@ -76,11 +76,11 @@ function BuildingScraping() {
           <ul>
             <li><strong>부동산 검색 포털</strong></li>
           </ul>
-          <ul>
+          {/* <ul>
             <li><a href="#">홈</a></li>
             <li><a href="#">문의하기</a></li>
             <li><a href="#" role="button">로그인</a></li>
-          </ul>
+          </ul> */}
         </nav>
         <main className="container">
           <section>
@@ -135,8 +135,6 @@ function BuildingScraping() {
                 buttonClass=""
               />
             )}
-            <h3>문서 보기</h3>
-            <p>관련 문서를 PDF 형태로 확인할 수 있습니다.</p>
             {pdfHex && <PdfViewer hexString={pdfHex} />}
           </section>
         </main>
