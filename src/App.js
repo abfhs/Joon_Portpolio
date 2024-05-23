@@ -2,13 +2,13 @@ import '@picocss/pico';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BuildingScraping from './components/scraping/BuildingScraping';
-import Opening from './components/main/Opening';
+import Introduce from './components/main/Introduce';
 
 function App() {
   return (
     <div>
-      {/* <Opening/> */}
-      <BuildingScraping/>
+      <Introduce/>
+      {/* <BuildingScraping/> */}
     </div>
   );
 }

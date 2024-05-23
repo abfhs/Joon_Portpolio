@@ -1,13 +1,20 @@
 import React from 'react';
-import { FaEnvelope } from 'react-icons/fa';
+import '../../styles/Header.css';
 
 const Header = () => {
   return (
     <header className="header">
-      <h1>Hello this is ...</h1>
-      <a href="mailto:example@example.com" className="email-icon">
-        <FaEnvelope size={30} />
-      </a>
+      <div className="container">
+        <h1>Kyson Dana</h1>
+        <nav>
+          <ul>
+            <li><a href="#digital-design">Digital Design</a></li>
+            <li><a href="#brand-design">Brand Design</a></li>
+            <li><a href="#photo-video">Photo/Video</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

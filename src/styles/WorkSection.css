@@ -1,0 +1,17 @@
+.work-section {
+    padding: 2rem 0;
+}
+
+.work-item {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #ff0;
+    color: #000;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0; /* 각진 사각형 모양으로 변경 */
+}

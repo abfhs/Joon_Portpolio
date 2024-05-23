@@ -1,0 +1,38 @@
+.footer {
+    background: #111;
+    padding: 2rem 0;
+  }
+  
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer .connect h3 {
+    margin-top: 0;
+  }
+  
+  .footer .connect form {
+    display: flex;
+  }
+  
+  .footer .connect input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: none;
+  }
+  
+  .footer .connect button {
+    background-color: #ff0;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .footer .links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  
