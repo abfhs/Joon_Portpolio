@@ -1,13 +1,60 @@
 .hero-section {
+    background-image: url('/public/background_profile.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    /* 기본 여백 제거 */
     display: flex;
-    align-items: center;
-    padding: 2rem 0;
+    align-items: flex-start;
+    /* 상단 정렬 */
+    justify-content: center;
+    /* 수평 가운데 정렬 */
+}
+
+.container {
+    width: 80%;
+    /* background: url('/public/speech_bubble.png') no-repeat center center; */
+    margin: 0 auto;
+    max-width: 1200px;
+    /* 최대 너비 설정 */
 }
 
 .hero-text {
     flex: 1;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    /* 상단 여백 추가 */
+    color: black
+}
+
+.hero-section {
+    display: flex;
+    /* align-items: center; */
+    padding: 2rem 0;
+}
+
+.speech-bubble h2 {
+    margin: 0;
+}
+
+
+.hero-image img {
+    max-width: 100%;
 }
 
 .hero-image img {
     max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+    .hero-text {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
 }

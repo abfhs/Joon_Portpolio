@@ -8,8 +8,8 @@ import '../../styles/Introduce.css';
 function Introduce() {
   return (
     <div className="Introduce">
-      <Header />
       <HeroSection />
+      <Header />
       <WorkSection />
       <Footer />
     </div>

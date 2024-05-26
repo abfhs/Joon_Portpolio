@@ -35,20 +35,6 @@ body {
     text-decoration: none;
 }
 
-.hero-section {
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-image img {
-    max-width: 100%;
-}
-
 .work-section {
     padding: 2rem 0;
 }
