@@ -14,12 +14,25 @@
 }
 
 .btn {
-    background-color: #ff0;
-    color: #000;
+    background-color: #333;
+    color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border: none;
     cursor: pointer;
     border-radius: 0;
     /* 각진 사각형 모양으로 변경 */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff0;
+    color: #000;
+}
+
+.case-study {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
 }

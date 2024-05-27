@@ -1,46 +1,45 @@
+@keyframes fadeToBlackAndWhite {
+    0% {
+        filter: grayscale(0%);
+    }
+    100% {
+        filter: grayscale(100%);
+    }
+}
+
 .hero-section {
     background-image: url('/public/background_profile.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
     margin: 0;
-    /* 기본 여백 제거 */
     display: flex;
     align-items: flex-start;
-    /* 상단 정렬 */
     justify-content: center;
-    /* 수평 가운데 정렬 */
+    animation: fadeToBlackAndWhite 5s ease-in-out forwards;
+    /* 5초 동안 서서히 흑백으로 변환 */
 }
 
 .container {
     width: 80%;
-    /* background: url('/public/speech_bubble.png') no-repeat center center; */
     margin: 0 auto;
     max-width: 1200px;
-    /* 최대 너비 설정 */
 }
 
 .hero-text {
     flex: 1;
     margin-right: 2rem;
     margin-top: 2rem;
-    /* 상단 여백 추가 */
-    color: black
+    color: black;
 }
 
 .hero-section {
     display: flex;
-    /* align-items: center; */
     padding: 2rem 0;
 }
 
 .speech-bubble h2 {
     margin: 0;
-}
-
-
-.hero-image img {
-    max-width: 100%;
 }
 
 .hero-image img {
@@ -50,7 +49,6 @@
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
-        /* text-align: center; */
     }
 
     .hero-text {

@@ -2,14 +2,16 @@ import React from 'react';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import WorkSection from './WorkSection';
+import Profile from './Profile';
 import Footer from './Footer';
 import '../../styles/Introduce.css';
 
 function Introduce() {
   return (
     <div className="Introduce">
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Header />
+      <Profile />
       <WorkSection />
       <Footer />
     </div>
