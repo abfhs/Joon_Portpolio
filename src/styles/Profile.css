@@ -1,6 +1,5 @@
 .profile-container {
-    display: flex;
-    flex-direction: row; /* 열 방향으로 변경 */
+    flex-direction: row;
     align-items: center;
     background-color: #111;
     color: #fff;
@@ -12,15 +11,19 @@
     max-width: 1200px;
 }
 
+.flex-div {
+    display: flex;
+}
+
 .profile-image img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    margin-right: 2rem; /* 오른쪽에 여백 추가 */
+    margin-right: 2rem;
 }
 
 .profile-details {
-    /* text-align: center 제거 */
+    flex-grow: 1;
 }
 
 .profile-details h2 {
@@ -30,4 +33,22 @@
 
 .profile-details p {
     margin: 0.5rem 0;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.icon:hover {
+    color: #ff0;
+}
+
+.additional-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #222;
+    border-radius: 10px;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 
-function SelectionBox({ data, onChange, onSubmit, placeholder, buttonText, containerClass, selectClass, buttonClass }) {
+function SelectionBox({ data, onChange, onSubmit, placeholder, buttonText, containerClass, imgPath, selectClass, buttonClass }) {
   const handleChange = (event) => {
     onChange(event.target.value);
   };
@@ -15,6 +15,7 @@ function SelectionBox({ data, onChange, onSubmit, placeholder, buttonText, conta
         ))}
       </Form.Select>
       <button className={buttonClass} type="submit" onClick={onSubmit}>{buttonText}</button>
+      <img src={imgPath} />
     </div>
   );
 }

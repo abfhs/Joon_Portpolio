@@ -39,6 +39,7 @@ export const sendPostRequest1 = async (addrKey) => {
         });
 };
 
+//호 검색
 export const sendPostRequest2 = async (dongKey) => {
     var postData = {};
     postData.cookieString = localStorage.getItem('cookieString')
@@ -57,6 +58,8 @@ export const sendPostRequest2 = async (dongKey) => {
         });
 };
 
+
+//pdf발급 요청
 export const sendPostRequest3 = async (hokey) => {
     var postData = {};
     postData.cookieString = localStorage.getItem('cookieString')

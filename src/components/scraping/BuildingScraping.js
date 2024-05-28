@@ -20,6 +20,7 @@ function BuildingScraping() {
   const [hokey, setHokey] = useState(null);
 
   const [pdfHex, setpdfHex] = useState("");
+  const [loading, setLoading] = useState(false); // 로딩 상태 추가
 
   const addressSearchState = useAnimatedRemoval();
   const addrSelectState = useAnimatedRemoval();
@@ -62,25 +63,24 @@ function BuildingScraping() {
 
   const handleHoSearch = () => {
     hoSelectState.hide();
+    setLoading(true); // 로딩 상태 시작
 
     sendPostRequest3(hokey).then(() => {
       const pdfHex = localStorage.getItem('pdfHex');
       setpdfHex(pdfHex);
+      setLoading(false); // 로딩 상태 종료
+    }).catch(() => {
+      setLoading(false); // 에러 발생 시에도 로딩 상태 종료
     });
   };
 
   return (
-    <div className="background-image" style={{ backgroundImage: "url('/Apart.webp')" }}>
+    <div className="background-image">
       <div className="overlay">
         <nav className="container-fluid">
           <ul>
             <li><strong>부동산 검색 포털</strong></li>
           </ul>
-          {/* <ul>
-            <li><a href="#">홈</a></li>
-            <li><a href="#">문의하기</a></li>
-            <li><a href="#" role="button">로그인</a></li>
-          </ul> */}
         </nav>
         <main className="container">
           <section>
@@ -97,6 +97,7 @@ function BuildingScraping() {
                   />
                   <button type="button" onClick={handleAddressSearch}>검색</button>
                 </form>
+                <img src="/Login.gif" alt="Profile" />
               </div>
             )}
             {addrObj && !addrSelectState.isHidden && (
@@ -107,8 +108,9 @@ function BuildingScraping() {
                 placeholder="원하는주소를 선택하세요"
                 buttonText="동검색"
                 containerClass={`addr-container ${!addrSelectState.isVisible ? "hide-addr" : ""}`}
+                imgPath="/findAddr.gif"
                 selectClass=""
-                buttonClass=""
+                buttonClass="select-button"
               />
             )}
             {dongObj && !dongSelectState.isHidden && (
@@ -119,8 +121,9 @@ function BuildingScraping() {
                 placeholder="원하는동을 선택하세요"
                 buttonText="호검색"
                 containerClass={`dong-container ${!dongSelectState.isVisible ? "hide-dong" : ""}`}
+                imgPath="/findDong.gif"
                 selectClass=""
-                buttonClass=""
+                buttonClass="select-button"
               />
             )}
             {hoObj && !hoSelectState.isHidden && (
@@ -131,9 +134,15 @@ function BuildingScraping() {
                 placeholder="원하는호를 선택하세요"
                 buttonText="발급"
                 containerClass={`ho-container ${!hoSelectState.isVisible ? "hide-ho" : ""}`}
+                imgPath="/findHo.gif"
                 selectClass=""
-                buttonClass=""
+                buttonClass="select-button"
               />
+            )}
+            {loading && (
+              <div className="loading-icon">
+                <img src="/Loading.gif" alt="Loading..." />
+              </div>
             )}
             {pdfHex && <PdfViewer hexString={pdfHex} />}
           </section>

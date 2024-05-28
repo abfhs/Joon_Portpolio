@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/Header.css';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleProjectsClick = (e) => {
+    e.preventDefault();
+    navigate('/password');
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -10,7 +18,7 @@ const Header = () => {
           <ul>
             <li><a href="#profile">프로필</a></li>
             <li><a href="#education">교육</a></li>
-            <li><a href="#projects">프로젝트</a></li>
+            <li><a href="#projects" onClick={handleProjectsClick}>프로젝트</a></li>
           </ul>
         </nav>
       </div>

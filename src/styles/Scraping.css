@@ -1,4 +1,7 @@
+/* 기존 코드 유지 */
+
 .background-image {
+    background-image: url('/public/night-vive.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -6,8 +9,8 @@
 }
 
 .overlay {
-    background-color: rgba(255, 255, 255, 0.7);
-    /* 0.7의 투명도로 배경을 흐리게 설정 */
+    background-color: rgba(0, 0, 0, 0.7); /* 배경을 어두운 색으로 변경 */
+    color: #ccc; /* 글자 색상을 회색으로 변경 */
     padding: 30px;
     position: absolute;
     top: 0;
@@ -16,58 +19,28 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-  align-items: center; */
-}
-
-.search-container,
-.addr-container,
-.dong-container,
-.ho-container {
-    transition: transform 1.1s ease-out, opacity 1.1s ease-out;
-    display: flex;
-    justify-content: center;
-    opacity: 1;
-}
-
-.hide-search,
-.hide-addr,
-.hide-dong,
-.hide-ho {
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0s 1.1s, transform 1.1s ease-out, opacity 1.1s ease-out;
-}
-
-/* Flex container for search input and button */
-.search-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    /* Add space between input and button */
 }
 
 .search-form input[type="text"] {
     flex: 1;
-    /* Allow input to grow and fill available space */
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #ccc;
 }
-
+.select-button,
 .search-form button {
     flex-shrink: 0;
-    /* Prevent button from shrinking */
+    padding: 10px;
+    background-color: #ffcc00; /* 버튼 배경을 노란색으로 변경 */
+    color: #333;
+    border: none;
+    cursor: pointer;
 }
 
 footer.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Footer의 배경을 반투명하게 설정 */
     color: white;
-    /* Footer 텍스트 색상 설정 */
 }
 
 /* Mobile Styles */
@@ -87,7 +60,6 @@ footer.container {
     .search-form {
         flex-direction: column;
         gap: 5px;
-        /* Add space between input and button */
     }
 
     .search-form input[type="text"] {
@@ -96,11 +68,6 @@ footer.container {
 
     .search-form button {
         width: 100%;
-    }
-
-    hgroup h2,
-    hgroup h3 {
-        text-align: center;
     }
 }
 
@@ -121,7 +88,6 @@ footer.container {
     .search-form {
         flex-direction: row;
         gap: 10px;
-        /* Add space between input and button */
     }
 
     .search-form input[type="text"] {
@@ -130,10 +96,5 @@ footer.container {
 
     .search-form button {
         width: auto;
-    }
-
-    hgroup h2,
-    hgroup h3 {
-        text-align: left;
     }
 }
