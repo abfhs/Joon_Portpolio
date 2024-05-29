@@ -1,17 +1,19 @@
 /* 기존 코드 유지 */
 
+/* 전체 배경 이미지 스타일 설정 */
 .background-image {
     background-image: url('/public/night-vive.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh; /* 화면 전체 높이 설정 */
 }
 
+/* 오버레이 스타일 설정 */
 .overlay {
     background-color: rgba(0, 0, 0, 0.7); /* 배경을 어두운 색으로 변경 */
     color: #ccc; /* 글자 색상을 회색으로 변경 */
-    padding: 30px;
+    padding: 20px; /* 모바일과 PC 모두 동일한 패딩 설정 */
     position: absolute;
     top: 0;
     left: 0;
@@ -19,15 +21,28 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center; /* 가운데 정렬 */
+    margin: 0 auto; /* 가운데 정렬 */
 }
 
+/* 최대 너비 설정 */
+main.container {
+    max-width: 769px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 검색 폼 입력 필드 스타일 */
 .search-form input[type="text"] {
     flex: 1;
     padding: 10px;
     border: 1px solid #555;
     background-color: #222;
     color: #ccc;
+    width: 100%; /* 전체 너비 사용 */
 }
+
+/* 버튼 스타일 설정 */
 .select-button,
 .search-form button {
     flex-shrink: 0;
@@ -36,65 +51,43 @@
     color: #333;
     border: none;
     cursor: pointer;
+    width: 100%; /* 전체 너비 사용 */
 }
 
+/* 푸터 스타일 설정 */
 footer.container {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .overlay {
-        padding: 20px;
-    }
-
-    .search-container,
-    .addr-container,
-    .dong-container,
-    .ho-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-form {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .search-form input[type="text"] {
-        width: 100%;
-    }
-
-    .search-form button {
-        width: 100%;
-    }
+/* 레이아웃 스타일 - 모바일, PC 공통 */
+.search-container,
+.addr-container,
+.dong-container,
+.ho-container {
+    flex-direction: column; /* 세로 정렬 */
+    align-items: stretch; /* 너비 100% 사용 */
 }
 
-/* PC Styles */
-@media (min-width: 769px) {
-    .overlay {
-        padding: 30px;
-    }
+/* 검색 폼 레이아웃 스타일 - 모바일, PC 공통 */
+.search-form {
+    flex-direction: column; /* 세로 정렬 */
+    gap: 5px; /* 요소 사이 간격 */
+}
 
-    .search-container,
-    .addr-container,
-    .dong-container,
-    .ho-container {
-        flex-direction: row;
-        align-items: center;
-    }
+/* 검색 폼 입력 필드, 버튼 스타일 - 모바일, PC 공통 */
+.search-form input[type="text"],
+.search-form button {
+    width: 100%; /* 전체 너비 사용 */
+}
 
-    .search-form {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .search-form input[type="text"] {
-        width: auto;
-    }
-
-    .search-form button {
-        width: auto;
-    }
+/* 이미지 비율 유지 및 너비 조정 */
+.addr-container img,
+.dong-container img,
+.ho-container img,
+.loading-icon img {
+    width: 100%; /* 컨테이너와 너비 같게 */
+    height: auto; /* 비율 유지 */
+    display: block;
+    margin: 0 auto;
 }

@@ -97,7 +97,7 @@ function BuildingScraping() {
                   />
                   <button type="button" onClick={handleAddressSearch}>검색</button>
                 </form>
-                <img src="/Login.gif" alt="Profile" />
+                <img src="/sky.jpeg" alt="Profile" />
               </div>
             )}
             {addrObj && !addrSelectState.isHidden && (
@@ -108,7 +108,7 @@ function BuildingScraping() {
                 placeholder="원하는주소를 선택하세요"
                 buttonText="동검색"
                 containerClass={`addr-container ${!addrSelectState.isVisible ? "hide-addr" : ""}`}
-                imgPath="/findAddr.gif"
+                imgPath="/sky.jpeg"
                 selectClass=""
                 buttonClass="select-button"
               />
@@ -121,7 +121,7 @@ function BuildingScraping() {
                 placeholder="원하는동을 선택하세요"
                 buttonText="호검색"
                 containerClass={`dong-container ${!dongSelectState.isVisible ? "hide-dong" : ""}`}
-                imgPath="/findDong.gif"
+                imgPath="/sky.jpeg"
                 selectClass=""
                 buttonClass="select-button"
               />
@@ -134,14 +134,14 @@ function BuildingScraping() {
                 placeholder="원하는호를 선택하세요"
                 buttonText="발급"
                 containerClass={`ho-container ${!hoSelectState.isVisible ? "hide-ho" : ""}`}
-                imgPath="/findHo.gif"
+                imgPath="/sky.jpeg"
                 selectClass=""
                 buttonClass="select-button"
               />
             )}
             {loading && (
               <div className="loading-icon">
-                <img src="/Loading.gif" alt="Loading..." />
+                <img src="/sky.jpeg" alt="Loading..." />
               </div>
             )}
             {pdfHex && <PdfViewer hexString={pdfHex} />}

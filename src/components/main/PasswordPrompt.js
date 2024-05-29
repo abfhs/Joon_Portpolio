@@ -1,18 +1,33 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/PasswordPromt.css';
+import { useAuth } from '../main/AuthContext';
 
 const PasswordPrompt = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const correctPassword = 'helloworld';
-    if (password.toLowerCase().replace(/\s+/g, '') === correctPassword) {
-      navigate('/building-scraping');
-    } else {
-      alert('비밀번호가 틀렸습니다.');
+    try {
+      const response = await fetch('http://localhost:6600/verify-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ password }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        login();
+        navigate('/building-scraping');
+      } else {
+        alert('비밀번호가 틀렸습니다.');
+      }
+    } catch (error) {
+      console.error('Error verifying password:', error);
+      alert('서버 오류가 발생했습니다.');
     }
   };
 
