@@ -42,6 +42,10 @@ main.container {
     width: 100%; /* 전체 너비 사용 */
 }
 
+.select-div{
+    margin-bottom: 20px;
+}
+
 /* 버튼 스타일 설정 */
 .select-button,
 .search-form button {
@@ -52,6 +56,14 @@ main.container {
     border: none;
     cursor: pointer;
     width: 100%; /* 전체 너비 사용 */
+    font-size: 1.1em; /* 글자 크기를 약간 더 크게 설정 */
+    font-weight: bold; /* 글씨를 두껍게 설정 */
+}
+
+/* 버튼에 마우스를 올렸을 때 스타일 설정 */
+.select-button:hover,
+.search-form button:hover {
+    background-color: #fffff0; /* 버튼 배경을 아이보리색으로 변경 */
 }
 
 /* 푸터 스타일 설정 */
