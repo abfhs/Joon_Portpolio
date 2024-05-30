@@ -1,4 +1,4 @@
-/* 기존 코드 유지 */
+
 
 /* 전체 배경 이미지 스타일 설정 */
 .background-image {
@@ -30,6 +30,10 @@ main.container {
     max-width: 769px;
     width: 100%;
     margin: 0 auto;
+}
+
+main.container p {
+    color:#ccc;
 }
 
 /* 검색 폼 입력 필드 스타일 */
@@ -103,3 +107,4 @@ footer.container {
     display: block;
     margin: 0 auto;
 }
+

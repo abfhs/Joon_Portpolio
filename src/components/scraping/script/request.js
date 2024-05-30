@@ -9,7 +9,7 @@ export const sendPostRequest = async (address) => {
 
     await axios.post("http://127.0.0.1:6600/getLogin", postData, { "Content-Type": "application/json" })
         .then(function (response) {
-            alert("주소 검색에 성공했습니다.");
+            // alert("주소 검색에 성공했습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);
             localStorage.setItem('addrObj', JSON.stringify(response.data.data));
         })
