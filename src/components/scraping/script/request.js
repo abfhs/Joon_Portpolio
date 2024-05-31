@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+const hostURL = "http://127.0.0.1:6600"
+// const hostURL = "http://43.202.61.138:6600"; //aws서버 넣기
+
 //로그인부터 주소로 검색까지
 export const sendPostRequest = async (address) => {
     var postData = {};
@@ -7,7 +10,7 @@ export const sendPostRequest = async (address) => {
     postData.address = address;
     // postData.address = "과수원길25번길4";
 
-    await axios.post("http://127.0.0.1:6600/getLogin", postData, { "Content-Type": "application/json" })
+    await axios.post(hostURL + "/getLogin", postData, { "Content-Type": "application/json" })
         .then(function (response) {
             // alert("주소 검색에 성공했습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);
@@ -26,7 +29,7 @@ export const sendPostRequest1 = async (addrKey) => {
     postData.cookieString = localStorage.getItem('cookieString')
     postData.dongCode = addrKey;
 
-    await axios.post("http://127.0.0.1:6600/findDong", postData, { "Content-Type": "application/json" })
+    await axios.post(hostURL + "/findDong", postData, { "Content-Type": "application/json" })
         .then(function (response) {
             alert("동 검색에 성공했습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);
@@ -45,7 +48,7 @@ export const sendPostRequest2 = async (dongKey) => {
     postData.cookieString = localStorage.getItem('cookieString')
     postData.hoCode = dongKey;
 
-    await axios.post("http://127.0.0.1:6600/findHo", postData, { "Content-Type": "application/json" })
+    await axios.post(hostURL + "/findHo", postData, { "Content-Type": "application/json" })
         .then(function (response) {
             alert("POST 요청이 성공적으로 전송되었습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);
@@ -88,7 +91,7 @@ export const sendPostRequest3 = async (hokey) => {
     //     "untClsfCd": "1125"
     // };
 
-    await axios.post("http://127.0.0.1:6600/getPdf", postData, { "Content-Type": "application/json" })
+    await axios.post(hostURL + "/getPdf", postData, { "Content-Type": "application/json" })
         .then(function (response) {
             alert("POST 요청이 성공적으로 전송되었습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);

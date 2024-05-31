@@ -27,7 +27,7 @@
 
 /* 최대 너비 설정 */
 main.container {
-    max-width: 769px;
+    max-width: 430px;
     width: 100%;
     margin: 0 auto;
 }
@@ -106,5 +106,17 @@ footer.container {
     height: auto; /* 비율 유지 */
     display: block;
     margin: 0 auto;
+}
+
+.download-button {
+    flex-shrink: 0;
+    padding: 10px;
+    background-color: #ffcc00; /* 버튼 배경을 노란색으로 변경 */
+    color: #333;
+    border: none;
+    cursor: pointer;
+    /* width: 100%; 전체 너비 사용 */
+    font-size: 1.1em; /* 글자 크기를 약간 더 크게 설정 */
+    font-weight: bold; /* 글씨를 두껍게 설정 */
 }
 

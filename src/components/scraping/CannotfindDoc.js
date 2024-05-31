@@ -1,12 +1,16 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 function CannotfindDoc() {
-  const navigate = useNavigate();
 
   const handleBackClick = () => {
-    navigate('/');
-  };
+    // 로컬 스토리지 초기화
+   localStorage.clear();
+   
+   // isAuthenticated 값 복원
+   localStorage.setItem('isAuthenticated', 'true');
+
+   window.location.reload();
+ };
 
   return (
     <div className="empty-result">

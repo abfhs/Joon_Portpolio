@@ -103,6 +103,7 @@ function BuildingScraping() {
           <section>
             <hgroup>
               <h2>집합 건축물대장 전유부 발급</h2>
+              {/* <h2>%EC%A7%91%ED%95%A9</h2> */}
               <h3>원하는 위치와 조건을 검색해 보세요.</h3>
             </hgroup>
             <div class="progress-div">
@@ -125,7 +126,8 @@ function BuildingScraping() {
                   />
                   <button type="button" onClick={handleAddressSearch}>검색</button>
                 </form>
-                <img src="/sky.jpeg" alt="Profile" />
+                {/* <img src="/sky.jpeg" alt="Profile" /> */}
+                <img src="/Login.gif" alt="Profile" />
               </div>
             )}
             {addrObj && !addrSelectState.isHidden && (
@@ -139,7 +141,8 @@ function BuildingScraping() {
                   placeholder="원하는주소를 선택하세요"
                   buttonText="동검색"
                   containerClass={`addr-container ${!addrSelectState.isVisible ? "hide-addr" : ""}`}
-                  imgPath="/sky.jpeg"
+                  // imgPath="/sky.jpeg"
+                  imgPath="/findAddr.gif"
                   selectClass=""
                   buttonClass="select-button"
                 />
@@ -157,7 +160,8 @@ function BuildingScraping() {
                   placeholder="원하는동을 선택하세요"
                   buttonText="호검색"
                   containerClass={`dong-container ${!dongSelectState.isVisible ? "hide-dong" : ""}`}
-                  imgPath="/sky.jpeg"
+                  // imgPath="/sky.jpeg"
+                  imgPath="/findDong.gif"
                   selectClass=""
                   buttonClass="select-button"
                 />
@@ -168,13 +172,14 @@ function BuildingScraping() {
                 <CannotfindDoc /> // 에러페이지 컴포넌트
               ) : (
                 <SelectionBox
-                  data={hoObj.findExposList.map(item => ({ value: JSON.stringify(item), label: item.hoNm }))}
+                  data={hoObj.hits.hits.map(item => ({ value: JSON.stringify(item), label: item._source.hoNm }))}
                   onChange={setHokey}
                   onSubmit={handleHoSearch}
                   placeholder="원하는호를 선택하세요"
                   buttonText="발급"
                   containerClass={`ho-container ${!hoSelectState.isVisible ? "hide-ho" : ""}`}
-                  imgPath="/sky.jpeg"
+                  // imgPath="/sky.jpeg"
+                  imgPath="/findHo.gif"
                   selectClass=""
                   buttonClass="select-button"
                 />
@@ -182,7 +187,8 @@ function BuildingScraping() {
             )}
             {loading && (
               <div className="loading-page">
-                <img src="/profile_fake.png" alt="Loading..." />
+                {/* <img src="/profile_fake.png" alt="Loading..." /> */}
+                <img src="/Loding.gif" alt="Loading..." />
               </div>
             )}
             {pdfHex && <PdfViewer hexString={pdfHex} />}
