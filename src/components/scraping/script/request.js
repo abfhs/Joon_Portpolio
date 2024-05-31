@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const hostURL = "http://127.0.0.1:6600"
-// const hostURL = "http://43.202.61.138:6600"; //aws서버 넣기
+// const hostURL = "http://127.0.0.1:6600"
+const hostURL = "http://3.38.213.215:6600"; //aws서버 넣기
 
 //로그인부터 주소로 검색까지
 export const sendPostRequest = async (address) => {
