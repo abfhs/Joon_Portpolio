@@ -11,7 +11,8 @@ const PasswordPrompt = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://192.168.10.130:6600/verify-password', {
+      // const response = await fetch('http://192.168.10.130:6600/verify-password', {
+      const response = await fetch('https://depressed-mariquilla-joonzero-555b86c3.koyeb.app/verify-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

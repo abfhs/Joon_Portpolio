@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const hostURL = "http://127.0.0.1:6600"
-const hostURL = "http://192.168.10.130:6600"; //aws서버 넣기
+const hostURL = "https://depressed-mariquilla-joonzero-555b86c3.koyeb.app"; //aws서버 넣기
 
 //로그인부터 주소로 검색까지
 export const sendPostRequest = async (address) => {
@@ -107,6 +107,6 @@ export const sendPostRequest3 = async (hokey) => {
 
 // LocalStorage 데이터를 삭제하고 페이지를 새로고침하는 함수
 function clearLocalStorageAndRefresh() {
-    // localStorage.clear();
-    // window.location.reload();
+    localStorage.clear();
+    window.location.reload();
 }
