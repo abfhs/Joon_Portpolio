@@ -11,7 +11,7 @@ const PasswordPrompt = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://3.38.213.215:6600/verify-password', {
+      const response = await fetch('http://192.168.10.130:6600/verify-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
