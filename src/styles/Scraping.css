@@ -25,6 +25,35 @@
     margin: 0 auto; /* 가운데 정렬 */
 }
 
+.search-container,
+.addr-container,
+.dong-container,
+.ho-container {
+    transition: transform 1.1s ease-out, opacity 1.1s ease-out;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+}
+
+.hide-search,
+.hide-addr,
+.hide-dong,
+.hide-ho {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s 1.1s, transform 1.1s ease-out, opacity 1.1s ease-out;
+}
+
+/* Flex container for search input and button */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Add space between input and button */
+}
+
 /* 최대 너비 설정 */
 main.container {
     max-width: 430px;
