@@ -154,7 +154,7 @@ function BuildingScraping() {
                 <CannotfindDoc /> // 에러페이지 컴포넌트
               ) : (
                 <SelectionBox
-                  data={dongObj.hits.hits.map(item => ({ value: JSON.stringify(item), label: item._source.dongNm }))}
+                  data={dongObj.hits.hits.map(item => ({ value: item._id, label: item._source.dongNm }))}
                   onChange={setDongkey}
                   onSubmit={handleDongSearch}
                   placeholder="원하는동을 선택하세요"
@@ -188,7 +188,7 @@ function BuildingScraping() {
             {loading && (
               <div className="loading-page">
                 {/* <img src="/profile_fake.png" alt="Loading..." /> */}
-                <img src="/Loding.gif" alt="Loading..." />
+                <img class="loading-icon" src="/boxloading.gif" alt="Loading..." />
               </div>
             )}
             {pdfHex && <PdfViewer hexString={pdfHex} />}

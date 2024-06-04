@@ -95,6 +95,8 @@ main.container p {
 
 /* 버튼에 마우스를 올렸을 때 스타일 설정 */
 .select-button:hover,
+.download-button:hover,
+.main-button:hover,
 .search-form button:hover {
     background-color: #fffff0; /* 버튼 배경을 아이보리색으로 변경 */
 }
@@ -130,6 +132,7 @@ footer.container {
 .addr-container img,
 .dong-container img,
 .ho-container img,
+
 .loading-icon img {
     width: 100%; /* 컨테이너와 너비 같게 */
     height: auto; /* 비율 유지 */
@@ -141,6 +144,18 @@ footer.container {
     flex-shrink: 0;
     padding: 10px;
     background-color: #ffcc00; /* 버튼 배경을 노란색으로 변경 */
+    color: #333;
+    border: none;
+    cursor: pointer;
+    /* width: 100%; 전체 너비 사용 */
+    font-size: 1.1em; /* 글자 크기를 약간 더 크게 설정 */
+    font-weight: bold; /* 글씨를 두껍게 설정 */
+}
+
+.main-button {
+    flex-shrink: 0;
+    padding: 10px;
+    background-color: #fc6812; /* 버튼 배경을 노란색으로 변경 */
     color: #333;
     border: none;
     cursor: pointer;

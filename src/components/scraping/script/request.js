@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-// const hostURL = "http://127.0.0.1:6600"
-const hostURL = "https://depressed-mariquilla-joonzero-555b86c3.koyeb.app"; //aws서버 넣기
+const hostURL = "http://127.0.0.1:6600"
+
+//koyeb주소
+// const hostURL = "https://depressed-mariquilla-joonzero-555b86c3.koyeb.app";
 
 //로그인부터 주소로 검색까지
 export const sendPostRequest = async (address) => {
@@ -27,11 +29,11 @@ export const sendPostRequest = async (address) => {
 export const sendPostRequest1 = async (addrKey) => {
     var postData = {};
     postData.cookieString = localStorage.getItem('cookieString')
-    postData.dongCode = addrKey;
+    postData.addrCode = addrKey;
 
     await axios.post(hostURL + "/findDong", postData, { "Content-Type": "application/json" })
         .then(function (response) {
-            alert("동 검색에 성공했습니다.");
+            // alert("동 검색에 성공했습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);
             localStorage.setItem('dongObj', JSON.stringify(response.data.data));
         })
@@ -46,11 +48,11 @@ export const sendPostRequest1 = async (addrKey) => {
 export const sendPostRequest2 = async (dongKey) => {
     var postData = {};
     postData.cookieString = localStorage.getItem('cookieString')
-    postData.hoCode = dongKey;
+    postData.dongCode = dongKey;
 
     await axios.post(hostURL + "/findHo", postData, { "Content-Type": "application/json" })
         .then(function (response) {
-            alert("POST 요청이 성공적으로 전송되었습니다.");
+            // alert("POST 요청이 성공적으로 전송되었습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);
             localStorage.setItem('hoObj', JSON.stringify(response.data.data));
         })
@@ -93,7 +95,7 @@ export const sendPostRequest3 = async (hokey) => {
 
     await axios.post(hostURL + "/getPdf", postData, { "Content-Type": "application/json" })
         .then(function (response) {
-            alert("POST 요청이 성공적으로 전송되었습니다.");
+            // alert("POST 요청이 성공적으로 전송되었습니다.");
             localStorage.setItem('cookieString', response.data.cookieString);
             localStorage.setItem('pdfHex', JSON.stringify(response.data.data));
         })
@@ -107,6 +109,6 @@ export const sendPostRequest3 = async (hokey) => {
 
 // LocalStorage 데이터를 삭제하고 페이지를 새로고침하는 함수
 function clearLocalStorageAndRefresh() {
-    localStorage.clear();
-    window.location.reload();
+    // localStorage.clear();
+    // window.location.reload();
 }

@@ -19,11 +19,20 @@ const PdfViewer = ({ hexString }) => {
         saveAs(blob, "downloaded.pdf");
     };
 
+    const moveMain = () => {
+         // 로컬 스토리지 초기화
+        localStorage.clear();
+        // isAuthenticated 값 복원
+        localStorage.setItem('isAuthenticated', 'true');
+        window.location.reload();
+    };
+
     return (
         <div>
             <h3>문서 보기</h3>
             <p>관련 문서를 PDF 형태로 확인할 수 있습니다.</p>
             <button className="download-button" onClick={handleDownloadPdf}>PDF 다운로드</button>
+            <button className="main-button" onClick={moveMain}>다른주소로 검색</button>
         </div>
     );
 };
