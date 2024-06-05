@@ -43,7 +43,7 @@ const PasswordPrompt = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">입력</button>
+        <button class="download-button"type="submit">입력</button>
       </form>
     </div>
   );

@@ -33,6 +33,7 @@ const PdfViewer = ({ hexString }) => {
             <p>관련 문서를 PDF 형태로 확인할 수 있습니다.</p>
             <button className="download-button" onClick={handleDownloadPdf}>PDF 다운로드</button>
             <button className="main-button" onClick={moveMain}>다른주소로 검색</button>
+            <img src="/Logout.gif" className="logout-img" alt="Loading..." />
         </div>
     );
 };

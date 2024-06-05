@@ -187,8 +187,8 @@ function BuildingScraping() {
             )}
             {loading && (
               <div className="loading-page">
-                {/* <img src="/profile_fake.png" alt="Loading..." /> */}
-                <img class="loading-icon" src="/boxloading.gif" alt="Loading..." />
+                <img className="loading-icon" src="/boxloading.gif" alt="Loading..." />
+                <img src="/print.gif" alt="Loading..." />
               </div>
             )}
             {pdfHex && <PdfViewer hexString={pdfHex} />}

@@ -109,6 +109,6 @@ export const sendPostRequest3 = async (hokey) => {
 
 // LocalStorage 데이터를 삭제하고 페이지를 새로고침하는 함수
 function clearLocalStorageAndRefresh() {
-    // localStorage.clear();
-    // window.location.reload();
+    localStorage.clear();
+    window.location.reload();
 }

@@ -56,7 +56,7 @@
 
 /* 최대 너비 설정 */
 main.container {
-    max-width: 430px;
+    max-width: 680px;
     width: 100%;
     margin: 0 auto;
 }
@@ -132,13 +132,28 @@ footer.container {
 .addr-container img,
 .dong-container img,
 .ho-container img,
-
 .loading-icon img {
     width: 100%; /* 컨테이너와 너비 같게 */
     height: auto; /* 비율 유지 */
     display: block;
     margin: 0 auto;
 }
+
+.logout-img {
+    margin-top: 20px;
+}
+
+.loading-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-icon {
+    margin: 0 10px;
+  }
+
 
 .download-button {
     flex-shrink: 0;
@@ -155,6 +170,7 @@ footer.container {
 .main-button {
     flex-shrink: 0;
     padding: 10px;
+    margin-left: 10px;
     background-color: #fc6812; /* 버튼 배경을 노란색으로 변경 */
     color: #333;
     border: none;
