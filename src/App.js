@@ -13,9 +13,7 @@ function App() {
       <Router>
         <Routes>
           {/* <Route path="/password" element={<PasswordPrompt />} /> */}
-          <Route path="/" element={<PasswordPrompt />} />
-          <Route path="/building-scraping" element={<BuildingScraping />} />
-
+          <Route path="/" element={<BuildingScraping />} />
         </Routes>
       </Router>
     </AuthProvider>
