@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-// const hostURL = "http://127.0.0.1:6600"
+const hostURL = "http://127.0.0.1:6600"
 
 //koyeb주소
-const hostURL = "https://depressed-mariquilla-joonzero-555b86c3.koyeb.app";
+// const hostURL = "https://depressed-mariquilla-joonzero-555b86c3.koyeb.app";
 
 //로그인부터 주소로 검색까지
 export const sendPostRequest = async (address) => {
@@ -100,7 +100,7 @@ export const sendPostRequest3 = async (hokey) => {
             localStorage.setItem('pdfHex', JSON.stringify(response.data.data));
         })
         .catch(function (error) {
-            alert("POST 요청 전송 중 오류가 발생했습니다.");
+            alert("죄송합니다.. 세움터 사이트가 변경되어 스크래핑 오류가 발생했습니다! 최대한 빠르게 수정하겠습니다!");
             console.error(error);
             clearLocalStorageAndRefresh();
         });
